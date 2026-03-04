@@ -6,8 +6,6 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "pages:build": "npx @cloudflare/next-on-pages",
-    "pages:deploy": "wrangler pages deploy .vercel/output/static",
     "db:init": "wrangler d1 execute talentmatch-db --file=schema.sql --local",
     "db:init:remote": "wrangler d1 execute talentmatch-db --file=schema.sql --remote"
   },
@@ -17,8 +15,8 @@
     "react-dom": "^18"
   },
   "devDependencies": {
-    "@cloudflare/next-on-pages": "^1.13.0",
     "@cloudflare/workers-types": "^4.0.0",
+    "@opennextjs/cloudflare": "^1.0.0",
     "wrangler": "^3.0.0"
   }
 }
