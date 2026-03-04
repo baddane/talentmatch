@@ -1,0 +1,26 @@
+name = "talentmatch"
+compatibility_date = "2024-09-23"
+compatibility_flags = ["nodejs_compat"]
+pages_build_output_dir = ".vercel/output/static"
+
+# ─── D1 Database ─────────────────────────────────────────────────────────────
+# Après avoir créé la DB avec "wrangler d1 create talentmatch-db",
+# colle le database_id ici ↓
+[[d1_databases]]
+binding = "DB"
+database_name = "talentmatch-db"
+database_id = "a7b2f659-e0f0-4d95-8f55-05f7f72f5772"
+
+# ─── Vectorize ───────────────────────────────────────────────────────────────
+# Créés avec les commandes dans le README
+[[vectorize]]
+binding = "VECTORIZE_JOBS"
+index_name = "talentmatch-jobs"
+
+[[vectorize]]
+binding = "VECTORIZE_CVS"
+index_name = "talentmatch-cvs"
+
+# ─── Cloudflare AI ───────────────────────────────────────────────────────────
+[ai]
+binding = "AI"
