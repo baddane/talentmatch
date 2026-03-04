@@ -12,7 +12,7 @@
     "db:init:remote": "wrangler d1 execute talentmatch-db --file=schema.sql --remote"
   },
   "dependencies": {
-    "next": "14.2.5",
+    "next": "^15.0.0",
     "react": "^18",
     "react-dom": "^18"
   },
